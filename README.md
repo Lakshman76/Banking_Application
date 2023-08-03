@@ -1,6 +1,6 @@
 # Banking_Application
 
-This repository contains a banking application that allows users to perform various banking operations such as depositing money, withdrawing money, and checking account balances. 
+This repository contains a banking application that allows users to perform various banking operations such as depositing money, withdrawing money, and checking account balances and before doing this user had to signup first then signin. 
 
 ## Features
 
@@ -29,6 +29,9 @@ The banking application has the following dependencies:
 - HTML
 - CSS
 - JavaScript
+- Node.js
+- Express.js
+- MongoDB
 
 ## Usage
 
@@ -36,13 +39,16 @@ To use the banking application, follow the steps below:
 
 1. Launch the application.
 
-2. Select the desired operation (deposit or withdraw) from the selection option.
+2. If you are already register then do signin otherwise first signup then signin.
 
-3. Enter the necessary information as prompted by the application (e.g., deposit amount, withdrawal amount).
+3. Select the desired operation (deposit or withdraw) from the selection option.
 
-4. Follow the instructions on the screen to complete the operation.
+4. Enter the necessary information as prompted by the application (e.g., deposit amount, withdrawal amount).
 
-You can access the live version of the banking application [here](https://glowing-boba-b05bd4.netlify.app/).
+5. Anytime you deposit or withdraw click on check balance to see how much money remaining.
+
+6. Follow the instructions on the screen to complete the operation.
+
 
 ## Contributing
 
