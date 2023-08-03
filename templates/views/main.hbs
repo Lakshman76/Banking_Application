@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn5.vectorstock.com/i/1000x1000/29/69/online-banking-application-vector-37162969.jpg" type="image/x-icon">
+    <title>Banking Application</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.container .wrapper{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container .wrapper div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container .wrapper h1{
+    font-size: 60px;
+}
+.container .wrapper label{
+    font-size: 30px;
+}  
+.container .wrapper input{
+    width:300px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: transparent;
+    color: rgb(63, 62, 62);
+    font-size: 25px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.container .wrapper select{
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+}
+.container .wrapper select option{
+    background-color:#fbd786;
+}
+.container .wrapper #Deposit-withdraw{
+    width: 40%;
+    height: 34px;
+    color: white;
+    font-weight: 500;
+    background-color: #3e3ef2;
+    border: none;
+    border-radius: 5px;
+}
+.container .wrapper #Deposit-withdraw:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid blue;
+    color: blue;
+}
+.container .wrapper button{
+    width: 50%;
+    height: 34px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #f7797d;
+}
+.container .wrapper button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #f85e63;
+    border: 2px solid #f7797d;
+}
+.container .wrapper #output{
+    display: flex;
+    justify-content: inherit;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* Media query */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    body{
+        background-repeat: no-repeat;
+    }
+    .container{
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .container .wrapper h1{
+        font-size: 45px;
+    }
+    .container .wrapper div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .container .wrapper div input{
+        margin-left: 0;
+        width: 100%;
+        height: 45px;
+        font-size: 30px;
+    }
+    .container .wrapper select{
+        width: 100%;
+        height: 45px;
+        font-size: 28px;
+    }
+    .container .wrapper select option{
+        background-color: transparent;
+        font-size: 20px;
+    }
+    .container .wrapper #Deposit-withdraw{
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+    }
+    .container .wrapper button{
+        width: 100%;
+        height: 50px;
+        font-size: 28px;
+    }
+    .container .wrapper #output{
+        font-size: 30px;
+    }
+}
+/* Media query for mobile  */
+@media  (max-width: 480px){
+    body{
+        background-repeat: no-repeat;
+    }
+    .container{
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .container .wrapper h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .container .wrapper div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .container .wrapper div input{
+        margin-left: 0;
+        width: 100%;
+        height: 45px;
+        font-size: 30px;
+    }
+    .container .wrapper select{
+        width: 100%;
+        height: 45px;
+        font-size: 28px;
+    }
+    .container .wrapper select option{
+        background-color: transparent;
+        font-size: 20px;
+    }
+    .container .wrapper #Deposit-withdraw{
+        width: 100%; 
+        height: 50px;
+        font-size: 30px;
+    }
+    .container .wrapper button{
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+    }
+    .container .wrapper #output{
+        font-size: 30px;
+    }
+}  
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>Banking Application</h1>
+            <div>
+                <label for="name">Enter Your Name</label>
+                <input type="text" id="name" autocomplete="nope">
+            </div>
+            <div>
+                <label for="ac-no">Enter Account Number</label>
+                <input type="number" id="ac-no" >
+            </div>
+            <div>
+                <label for="money">Select What You Want</label>
+                <select id="money">
+                    <option value=""></option>
+                    <option value="Deposit Money">Deposit Money</option>
+                    <option value="Withdraw Money">Withdraw Money</option>
+                </select>
+            </div>
+            <div>
+                <label for="amount">Enter Amount</label>
+                <input type="number" id="amount">
+            </div>
+            <!-- <button id="Deposit-withdraw">Submit</button> -->
+            <div>
+                <input type="button" value="Submit" id="Deposit-withdraw">
+                <button id="btn">Check Balance</button>
+            </div>
+            <div id="output"> </div>
+        </div>
+    </div>
+    <!-- Link javascript -->
+    
+<script>
+
+/**
+ * get username
+ * ask withdraw / deposit
+ * when withdraw --> total-amount if < 0 print insufficient balance
+ * when deposit  --> total+amount
+ */
+
+const result = document.getElementById('output');
+const submitButton = document.getElementById('Deposit-withdraw');
+const checkButton = document.getElementById("btn");
+
+const moneyType = document.getElementById('money');
+moneyType.addEventListener("change", () => {
+    submitButton.value = moneyType.value;
+});
+
+let totalAmount = 0;
+
+submitButton.addEventListener("click", () => {
+    const  moneyTypes = moneyType.value
+    const userName = document.getElementById('name').value;
+    const amount = document.getElementById('amount').value;
+
+    if (moneyTypes === "Deposit Money") {
+        totalAmount += parseInt(amount);
+        submitButton.value = "Deposited";
+        setTimeout(() => {
+            submitButton.value = "Deposit Again";
+        }, 4000);
+    } else if(moneyTypes === "Withdraw Money" && amount <= totalAmount){
+        totalAmount -= parseInt(amount);
+        submitButton.value = "Withdrawn";
+        setTimeout(() => {
+            submitButton.value = "Withdraw Again";
+        }, 4000);
+    } else {
+        result.innerHTML = alert("Insufficient Balance");
+        result.innerText = "Insufficient Balance";
+        submitButton.value =  'Nothing happen';
+        setTimeout(() => {
+            submitButton.value = "Withdraw";
+        }, 4000);
+    }
+
+})
+checkButton.addEventListener("click", () => {
+
+    const userName = document.getElementById('name').value;
+
+    if (totalAmount >= 0) {
+        result.innerHTML=`Hey ${userName}, Total Amount is - ${totalAmount.toLocaleString('en-IN')}`;
+    } 
+
+})
+</script>
+
+</body>
+</html>
