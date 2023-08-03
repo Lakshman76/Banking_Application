@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn5.vectorstock.com/i/1000x1000/29/69/online-banking-application-vector-37162969.jpg" type="image/x-icon">
+    <title>signup page</title>
+    <!-- Include Tailwind CSS as a CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance the design */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to top right, red, blue, white);
+        }
+        .signup-body input[type="submit"] {
+            background-color: #3131a1;
+        }
+        .signup-body input[type="submit"]:hover {
+            background-color: #19195a;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center h-screen">
+        <div class="w-full max-w-xl px-8 py-6 bg-white rounded-lg shadow-lg">
+            <header class="text-center text-4xl font-bold">
+                Sign up
+            </header>
+            <p class="text-sm text-gray-500 mt-2">
+                It just takes 30 seconds
+            </p>
+            <form action="/register" method="post" class="mt-4">
+                <div class="mb-4">
+                    <label for="name" class="block font-bold text-lg">Full Name:</label>
+                    <input type="text" id="name" name="name" autocomplete="nope" class="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-lg mt-1">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block font-bold text-lg">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="nope" class="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-lg mt-1">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block font-bold text-lg">Password:</label>
+                    <input type="password" id="password" name="password" class="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-lg mt-1">
+                </div>
+                <div class="mb-4">
+                    <label for="confirmPassword" class="block font-bold text-lg">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-lg mt-1">
+                </div>
+                <div class="text-center">
+                    <input type="submit" id="submit" value="Create Account" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md cursor-pointer hover:bg-blue-700 text-lg">
+                </div>
+            </form>
+
+            <footer class="text-gray-600 text-lg mt-4 text-center">
+                Already have an account? <a href="./login.hbs" class="text-blue-600 hover:underline">Login</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
