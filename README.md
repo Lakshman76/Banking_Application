@@ -20,14 +20,17 @@ To use the banking application, follow the instructions below:
 
 2. Open the banking application on your preferred code editor.
 
-3. Run the HTML file and see all features available in this.
+3. Install all dependencies using npm install.
+
+4. start server using npm start and see output.
 
 ## Dependencies
 
 The banking application has the following dependencies:
 
-- HTML
+- Handlebars
 - CSS
+- Tailwind
 - JavaScript
 - Node.js
 - Express.js
